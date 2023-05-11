@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function Dashboard() {
+const Savings = () => {
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await axios.get('http://localhost:4000/data');
+                const response = await axios.get('http://localhost:4000/savings');
                 setData(response.data);
             } catch (error) {
                 setError(error.message);
@@ -17,7 +17,7 @@ function Dashboard() {
         fetchData();
     }, []);
 
-    
+
     if (error) {
         return <div>Error: {error}</div>;
     }
@@ -50,4 +50,4 @@ function Dashboard() {
     );
 }
 
-export default Dashboard;
+export default Savings;
