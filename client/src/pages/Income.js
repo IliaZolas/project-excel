@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Table from '../components/table';
 
 const Income = () => {
     const [data, setData] = useState(null);
@@ -28,24 +29,7 @@ const Income = () => {
 
     return (
         <div>
-            <table>
-                <thead>
-                    <tr>
-                        {Object.keys(data[0]).map((header, index) => (
-                            <th key={index}>{header}</th>
-                        ))}
-                    </tr>
-                </thead>
-                <tbody>
-                    {data.map((row, index) => (
-                        <tr key={index}>
-                            {Object.values(row).map((value, index) => (
-                                <td key={index}>{value}</td>
-                            ))}
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
+            <Table data={data} />
         </div>
     );
 }
