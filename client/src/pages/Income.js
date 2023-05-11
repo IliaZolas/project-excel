@@ -28,7 +28,7 @@ const Income = () => {
     }
 
     return (
-        <div>
+        <div className='content'>
             <Table data={data} />
         </div>
     );

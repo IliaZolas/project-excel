@@ -16,7 +16,9 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />
+        <div>
+          <Navbar />
+        </div>
           <Routes>
             <Route 
               path="/income-statement" 
