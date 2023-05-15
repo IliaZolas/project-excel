@@ -2,6 +2,11 @@ const express = require('express');
 const router = express.Router();
 const XLSX = require('xlsx');
 
+router.get('/', (req, res) => {
+    res.send('Hello world');
+})
+
+
 router.get('/income-statement', (req, res) => {
     const workbook = XLSX.readFile(process.env.FILEPATH);
     const sheet = workbook.Sheets['Personal Income Statement'];

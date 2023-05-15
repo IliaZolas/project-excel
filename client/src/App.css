@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
   display: flex;
 }
 
@@ -8,3 +7,4 @@
   left: 300px;
   padding: 50px;
 }
+

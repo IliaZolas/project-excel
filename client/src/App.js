@@ -11,6 +11,7 @@ import Recon from './pages/Recon';
 import Savings from './pages/Savings';
 import Transactions from './pages/Transactions';
 import Navbar from './components/nav';
+import Home from './pages/Home';
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
           <Navbar />
         </div>
           <Routes>
+            <Route 
+              path="/" 
+              element={<Home />} 
+              />
             <Route 
               path="/income-statement" 
               element={<IncomeStatement />} 
