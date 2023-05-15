@@ -10,6 +10,7 @@ import PassiveIncome from './pages/PassiveIncome';
 import Recon from './pages/Recon';
 import Savings from './pages/Savings';
 import Transactions from './pages/Transactions';
+import SideNavbar from './components/sideNav';
 import Navbar from './components/nav';
 import Home from './pages/Home';
 
@@ -19,6 +20,7 @@ function App() {
       <Router>
         <div>
           <Navbar />
+          <SideNavbar />
         </div>
           <Routes>
             <Route 
